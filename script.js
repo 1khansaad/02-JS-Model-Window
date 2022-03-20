@@ -26,3 +26,9 @@ const closeMo = function(){
 closeModel.addEventListener('click', closeMo)
 overlay.addEventListener('click', closeMo)
 
+// evenlistner for close modal by Escape key
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !modal.classList.contains('hidden')){
+        closeMo()
+    }
+})
